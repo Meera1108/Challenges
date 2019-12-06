@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DRUM HIT</title>
+        
+        <link rel="stylesheet" href="ch1.css" type="text/css" />
+    </head>
+    <body>
+     <div class=drumkeys align=center>
+
+        <button class=button id="a" onclick="input(a)">A<br><span>CLAP</span></button>
+        <button class=button id="s" onclick="input(s)">S<br><span>HIHAT</span></button>
+        <button class=button id="d" onclick="input(d)">D<br><span>KICK</span></button>
+        <button class=button id="f" onclick="input(f)">F<br><span>BOOM</span></button>
+        <button class=button id="g" onclick="input(g)">G<br><span>RIDE</span></button>
+        <button class=button id="h" onclick="input(h)">H<br><span>TOM</span></button>
+        <button class=button id="j" onclick="input(j)">J<br><span>SNARE</span></button>
+        
+     </div>
+
+     <script>
+         
+        
+        var clap= new Audio('./sounds/clap.wav');
+        var hihat= new Audio('./sounds/hihat.wav');
+        var kick= new Audio('./sounds/kick.wav');
+        var boom= new Audio('./sounds/boom.wav');
+        var ride= new Audio('./sounds/ride.wav');
+        var tom= new Audio('./sounds/tom.wav');
+        var snare= new Audio('./sounds/snare.wav');
+
+        function input(key)
+        {
+            if(key===a) 
+            {
+                clap.currentTime = 0;
+                clap.play();
+                console.log(clap);
+            }
+            if(key===s) 
+            {
+                hihat.currentTime = 0;
+                hihat.play();
+            }
+            if(key===d) 
+            {
+                kick.currentTime = 0;
+                kick.play();
+            }
+            if(key===f) 
+            {
+                boom.currentTime = 0;
+                boom.play();
+            }
+            if(key===g) 
+            {
+                ride.currentTime = 0;
+                ride.play();
+            }
+            if(key===h) 
+            {
+                tom.currentTime = 0;
+                tom.play();
+            }
+            if(key===j) 
+            {
+                snare.currentTime = 0;
+                snare.play();
+            }
+            
+        }
+
+    window.addEventListener('keydown',function(event){
+        var x=event.keyCode;
+        switch(x)
+        {
+            case 65: input(a);
+            break;
+            case 83: input(s);
+            break;
+            case 68: input(d);
+            break;
+            case 70: input(f);
+            break;
+            case 71: input(g);
+            break;
+            case 72: input(h);
+            break;
+            case 74: input(j);
+            break;
+            default: return;
+        }
+
+});
+    </script>
+    </body>
+</html>

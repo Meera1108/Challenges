@@ -1,0 +1,60 @@
+body{
+    
+        background: url(key3.png);
+        background-repeat: no-repeat;
+        background-size: 1600px 1000px;
+      
+}
+
+.drumkeys
+{
+    padding-top: 20.5%;
+}
+.button {
+	
+	
+    border-radius: 3px;
+    background-color: rgb(9, 29, 211);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 24px;
+    width: 7%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button:hover {
+      background-color: #4CAF50;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button span:after {
+    
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  
+  
+  
